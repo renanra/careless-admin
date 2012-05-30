@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo APP | {{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/careless_admin.min.css">
+</head>
+<body>
+  <div id="panel">
+    
+    <div class="wrapper">
+      <header class="header">
+          <div class="content">
+              <hgroup class="hgroup">
+                  <h1><a href="/admin">Demo APP</a></h1>
+                  <h2>any slogan here...</h2>
+              </hgroup>
+              <nav class="user-nav">
+                  <ul>
+                      <li>Hello <a href="/admin/admins/1/edit">Admin</a></li>
+                      <li><a href="/" target="_blank">Go to docs</a></li>
+                      <li><a href="/demo/sign_in.html" class="tag error">Sign out</a></li>
+                  </ul>
+              </nav>
+          </div>
+      </header>
+
+      <nav class="nav">
+        <div class="content">
+          <ul>
+            <li{% if page.active_if == "/demo/" %} class="active"{% endif %}>
+              <a href="/demo">Dashboard</a>
+            </li>
+            <li{% if page.active_if == "/demo/clients/" %} class="active"{% endif %}>
+              <a href="/demo/clients">Clients</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="sub-wrapper">
+        <section class="section">
+          <div class="content">
+            {{ content }}
+          </div>
+        </section>
+      </div>
+    </div>
+  
+    <footer class="footer">
+      <div class="content">
+          <p>2012 © all rights reserved.</p>
+      </div>
+    </footer>    
+  </div>
+</body>
+</html>
