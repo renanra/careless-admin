@@ -1,0 +1,391 @@
+// Base Styles 
+* {
+    font: inherit;
+    text-align: inherit;
+    border: 0;
+    outline: 0;
+}
+body {
+    color: #000;
+    background-color: #fff;
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+// Links
+a {
+    text-decoration: inherit;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+// Headings
+h1 {
+    font-size:2em;
+}
+h2 {
+    font-size:1.8em;
+}
+h3 {
+    font-size:1.6em;
+}
+h4 {
+    font-size:1.4em;
+}
+h5 {
+    font-size:1.2em;
+}
+h6 {
+    font-size:1em;
+}
+h1, h2, h3, h4, h5, h6, p, ol, ul, table, hr {
+    margin: 0 0 10px 0;
+}
+h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child, p:last-child, ol:last-child, ul:last-child, table:last-child {
+    margin-bottom: 0;
+}
+
+// Lists
+ol, ul {
+    padding-left: 20px;
+    line-height: 2em;
+}
+li {
+    ol, ul {
+        margin-bottom: 0;
+    }
+}
+
+// Texts
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+small {
+    font-size: 0.6em;
+}
+
+// Misc
+hr {
+    border-top: 1px solid #000;
+}
+label, button {
+    cursor: pointer;
+}
+
+// Tables
+table {
+    width: 100%;
+}
+table {
+    border-collapse: collapse;
+    // border: 1px solid #000;    
+}
+tbody th, tbody td {
+    border-bottom: 1px solid #000;    
+}
+tbody tr:last-child th, tbody tr:last-child td {
+    border-bottom: 0;
+}
+th, td {
+    padding: 8px;
+}
+
+// Forms
+label, input[type=checkbox], input[type=radio] {
+    display: inline-block;
+    vertical-align: middle;
+}
+label:first-child {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+input[type=text], input[type=email], input[type=password], textarea, select {
+    border: 1px solid #000;
+    padding: 8px;
+    display: block;
+}
+input[type=text], input[type=email], input[type=password], select {
+    width: 242px;
+}
+textarea {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+select {
+    width: 260px;
+}
+input[type=file] {
+    padding: 8px;
+    display: block;
+}
+textarea {
+    resize: vertical;
+}
+option {
+    text-indent: 20px;
+}
+form fieldset {
+    margin: 10px 0;
+}
+fieldset legend {
+    font-size: 2em;
+    padding-bottom: 10px;
+}
+
+// Module Forms
+.form {
+    > div {
+        position: relative;
+        margin: 10px 0;
+        padding: 10px;
+        &:last-child a:not(.button) {
+            margin-right: 5px;      
+        }
+        label:not(:last-of-type) {
+            margin-right: 10px;
+        }
+    }
+    p { 
+        margin-bottom: 3px;
+    }
+}
+
+// Module Buttons
+.button, button {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 0 12px;
+    height: 42px;
+    line-height: 42px;
+}
+
+// Module Messages
+.message {
+    position: relative;
+    margin: 10px 0;
+    padding: 10px;
+    h6 {
+        font-weight: bold;
+    }
+    span {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+    }
+
+}
+
+// Module Tags
+.tag {
+    display: inline-block;
+    padding: 2px 4px;
+}
+
+// Module Pagination
+.pagination {
+    padding: 0;
+    list-style-type: none;
+    line-height: 1.5em;
+    ul {
+        padding: 0;
+    }
+    li {
+        display: inline;
+        &.current, * {
+            display: inline-block;
+            padding: 2px 8px;
+        }
+    }
+}
+
+
+// Module Accessibility
+.screen-reader-only {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    top: -1px;
+    overflow: hidden;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+
+// Structure
+html, body, #panel {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -28px;
+}
+.sub-wrapper, .header .content, .nav .content, .footer .content {
+    width: 980px;
+    margin: auto;
+}
+.header {
+    padding-top: 10px;
+    .content {
+      position: relative;      
+    }
+}
+.hgroup {
+    h1, h2 {
+        display: inline-block;
+        vertical-align: baseline;
+    }
+    h1{
+      border-right: 1px solid black;
+      margin-right: 15px;
+      padding-right: 20px;
+      a {
+        text-decoration: none;
+      }
+    }
+    h2 {
+        font-size: 1.4em;     
+        text-transform: uppercase; 
+    }
+}
+.user-nav {
+    text-align: right;
+    position: absolute;
+    top: 8px;
+    right: 0;
+    ul {
+        list-style: none;
+        line-height: 1.5em;
+        padding: 0;
+        li {
+            display: inline;
+            margin-right: 3px;
+            border-right: 1px solid #000;
+            padding-right: 8px;
+            &:last-child {
+                margin-right: 0;
+                border-right: none;
+                padding-right: 0;
+            }
+        }
+    }
+}
+.nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline;
+            line-height: 1.5em;
+            a {
+                display: inline-block;
+                padding: 0 10px;
+                height: 26px;
+                line-height: 26px;
+                margin-right: 10px;   
+            }
+        }
+    }
+}
+.section, .aside {
+    display: table-cell;
+    vertical-align: top;
+}
+.section {
+    width: 680px;
+}
+.aside {
+    width: 300px;
+    .content {
+        padding: 10px;
+        border: 1px solid #000;
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            li a {
+                display: block;
+            }
+        }
+    }
+}
+.sub-wrapper {
+    padding-bottom: 70px;
+    display: table;
+    margin-top: 30px;
+    .aside:first-child > div {
+      margin-right: 20px;
+    }
+    .aside:last-child > div {
+      margin-left: 20px;
+    }
+}
+.footer {
+  .content {
+    height: 26px;
+    line-height: 26px;
+  }
+}
+#modal {
+    padding: 60px 0;
+    .content {
+        width: 420px;
+        margin: auto;
+        position: relative;
+    }
+    .user-nav {
+        position: absolute;
+    }
+}
+
+// Responsable layout for #panel
+@media all and (max-width: 980px) {
+    .sub-wrapper, .header .content, .nav .content, .footer .content {
+        width: 100%;
+    }
+    .section, .aside {
+        display: block;
+        width: 100%;
+    }
+    .aside {
+        margin-top: 10px;
+    }
+    .sub-wrapper {
+        display: block;
+        .aside:first-child > div {
+          margin-right: 0;
+        }
+        .aside:last-child > div {
+          margin-left: 0;
+        }
+    }
+    .user-nav {
+        text-align: center;
+        position: static;
+        margin-bottom: 10px;
+    }
+    .header, .user-nav, .nav {
+        text-align: center;
+    }
+
+}
+
+// Responsable layout for #modal
+@media all and (max-width: 420px) {
+    #modal {
+        padding-top: 20px;
+        .content {
+            width: 100%;
+        }
+    }
+}
