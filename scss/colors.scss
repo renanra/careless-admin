@@ -1,14 +1,21 @@
+$color_default: #222;
+$color_off: #888;
+
+$bg_default: #dfe0ff;
+$bg_success: #d5ffce;
+$bg_warning: #fffbcc;
+$bg_error: #ffcece;
+$bg_off: #f2f2f2;
 
 // Base Style
 body {
-    color: #222;
+    color: $color_default;
 }
 a {
     color: #3251c6;
 }
 hr, table, tbody th, tbody td {
-    border-color: #cdd0f5;
-    border-style: dotted;
+    border-color: #ededed;
 }
 tr:nth-child(even) {
     background: #f8f8f8;
@@ -20,8 +27,9 @@ thead, tfoot {
     }
 }
 input[type=text], input[type=email], input[type=password], textarea, select {
-    border-color: #cdd0f5;
+    border-color: #ededed;
     background-color: #fff;
+    color: $color_default;
 }
 optgroup {
     font-weight: bold
@@ -31,27 +39,35 @@ option {
 }
 
 // Structure
+.user-nav ul li:first-child {
+    color: $color_off;
+}
 .hgroup h1,
 .user-nav ul li:not(:last-child) {
-    border-color: #cdd0f5;
-    border-style: dotted;
+    border-color: #ededed;
 }
+.user-nav ul li:last-child {
+    border-right: none;
+} 
 .header a {
     color: #222;
     h1 a {
         text-decoration: none;
     }
 }
-.nav ul li.active a {
-    color: #222;
-    background-color: #fff;    
-}
+
 .nav,
-.aside .content,
 .footer {
     border-color: transparent;
     background: #DFE0FF;
 }
+.aside .content {
+    border-color: transparent;
+    ul li a {
+        background: #DFE0FF;
+    }
+}
+
 .footer p {
     display: inline-block;
     padding: 0 10px;
@@ -59,6 +75,11 @@ option {
 }
 .header {
     border-color: transparent;
+}
+
+.nav ul li.active a {
+    color: #222;
+    background-color: #fff;    
 }
 
 // Module Messages
@@ -82,6 +103,10 @@ option {
         * {
             background: #dfe0ff;
         }
+        &.active * {
+            background: transparent;
+            color: $color_default;
+        }
     }
 }
 
@@ -99,22 +124,38 @@ option {
         font-weight: bold
     }
 }
+.form-search {
+    input, button {
+        border-color: #ededed;
+    }
+}
 
 
 // Module Colors
 .info {
-    background-color: #dfe0ff
+    background-color: #dfe0ff;
 }
 .success {
-    background-color: #d5ffce
+    color: #0b8d07 !important;
+    background-color: #d5ffce !important;
 }
 .warning {
-    background-color: #fffbcc
+    color: #a86800 !important;
+    background-color: #fffbcc !important;
 }
 .error {
-    background-color: #ffcece
+    color: #cd0a0a !important;
+    background-color: #ffcece !important;
 }
 .off {
     color: #999;
     background-color: #f2f2f2;
+}
+
+
+// COMMON
+.required:after {
+    content: " *";
+    color: #cd0a0a;
+    font-weight: bold;
 }

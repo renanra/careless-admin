@@ -12,6 +12,7 @@ body {
     font-size: 14px;
     line-height: 1.5;
     text-align: left;
+    margin: 0;
 }
 
 // Links
@@ -51,7 +52,6 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 // Lists
 ol, ul {
     padding-left: 20px;
-    line-height: 2em;
 }
 li {
     ol, ul {
@@ -95,6 +95,11 @@ tbody tr:last-child th, tbody tr:last-child td {
 th, td {
     padding: 8px;
 }
+.selectable {
+    tr > th:first-child {
+        width: 10px;
+    }
+}
 
 // Forms
 label, input[type=checkbox], input[type=radio] {
@@ -102,7 +107,6 @@ label, input[type=checkbox], input[type=radio] {
     vertical-align: middle;
 }
 label:first-child {
-  font-weight: bold;
   margin-bottom: 3px;
 }
 input[type=text], input[type=email], input[type=password], textarea, select {
@@ -116,8 +120,9 @@ input[type=text], input[type=email], input[type=password], select {
 textarea {
     padding: 8px;
     width: 100%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 select {
     width: 260px;
@@ -157,14 +162,31 @@ fieldset legend {
         margin-bottom: 3px;
     }
 }
+.form-search {
+    position: relative;
+    margin-bottom: 10px;
+    input {
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-right: 48px;
+    }
+    button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+    }
+}
 
 // Module Buttons
 .button, button {
     display: inline-block;
     margin-right: 5px;
     padding: 0 12px;
-    height: 42px;
-    line-height: 42px;
+    height: 34px;
+    line-height: 34px;
 }
 
 // Module Messages
@@ -172,8 +194,8 @@ fieldset legend {
     position: relative;
     margin: 10px 0;
     padding: 10px;
-    h6 {
-        font-weight: bold;
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 2px;
     }
     span {
         position: absolute;
@@ -181,7 +203,9 @@ fieldset legend {
         right: 0;
         padding: 10px;
     }
-
+    p {
+        padding: 0;
+    }
 }
 
 // Module Tags
@@ -194,7 +218,6 @@ fieldset legend {
 .pagination {
     padding: 0;
     list-style-type: none;
-    line-height: 1.5em;
     ul {
         padding: 0;
     }
@@ -202,7 +225,7 @@ fieldset legend {
         display: inline;
         &.current, * {
             display: inline-block;
-            padding: 2px 8px;
+            padding: 4px 8px;
         }
     }
 }
@@ -266,7 +289,6 @@ html, body, #panel {
     right: 0;
     ul {
         list-style: none;
-        line-height: 1.5em;
         padding: 0;
         li {
             display: inline;
@@ -275,8 +297,10 @@ html, body, #panel {
             padding-right: 8px;
             &:last-child {
                 margin-right: 0;
-                border-right: none;
                 padding-right: 0;
+            }
+            &:first-child {
+                border-right: none;                
             }
         }
     }
@@ -287,12 +311,10 @@ html, body, #panel {
         padding: 0;
         li {
             display: inline;
-            line-height: 1.5em;
             a {
+                line-height: 1;
                 display: inline-block;
-                padding: 0 10px;
-                height: 26px;
-                line-height: 26px;
+                padding: 8px;
                 margin-right: 10px;   
             }
         }
@@ -308,13 +330,18 @@ html, body, #panel {
 .aside {
     width: 300px;
     .content {
-        padding: 10px;
         border: 1px solid #000;
         ul {
             list-style-type: none;
             padding-left: 0;
-            li a {
-                display: block;
+            li {
+                a {
+                    padding: 8px;
+                    display: block;
+                }
+                &.separator {
+                    height: 10px;
+                }
             }
         }
     }
@@ -339,12 +366,18 @@ html, body, #panel {
 #modal {
     padding: 60px 0;
     .content {
-        width: 420px;
+        width: 340px;
         margin: auto;
         position: relative;
     }
     .user-nav {
         position: absolute;
+    }
+    input {
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
     }
 }
 
@@ -380,8 +413,8 @@ html, body, #panel {
 
 }
 
-// Responsable layout for #modal
-@media all and (max-width: 420px) {
+// Responsive layout for #modal
+@media all and (max-width: 340px) {
     #modal {
         padding-top: 20px;
         .content {

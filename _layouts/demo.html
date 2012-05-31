@@ -2,85 +2,18 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title>Demo APP | {{ page.title }}</title>
+  <title>COMPANY | {{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="/assets/careless_admin.css">
 </head>
 <body>
-  <div id="panel">
-    
-    <div class="wrapper">
-      <header class="header">
-          <div class="content">
-              <hgroup class="hgroup">
-                  <h1><a href="/admin">Demo APP</a></h1>
-                  <h2>any slogan here...</h2>
-              </hgroup>
-              <nav class="user-nav">
-                  <ul>
-                      <li>Hello <a href="/admin/admins/1/edit">Admin</a></li>
-                      <li><a href="/" target="_blank">Go to docs</a></li>
-                      <li><a href="/demo/sign_in.html" class="tag error">Sign out</a></li>
-                  </ul>
-              </nav>
-          </div>
-      </header>
-
-      <nav class="nav">
-        <div class="content">
-          <ul>
-            <li{% if page.active_if == "/demo/" %} class="active"{% endif %}>
-              <a href="/demo">Dashboard</a>
-            </li>
-            <li{% if page.active_if == "/demo/clients/" %} class="active"{% endif %}>
-              <a href="/demo/clients">Clients</a>
-            </li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Others</a></li>
-          </ul>
-        </div>
-      </nav>
-
-      <div class="sub-wrapper">
-        <section class="section">
-          <div class="content">
-            {{ content }}
-          </div>
-        </section>
-        {% if page.aside %}
-        <aside class="aside">
-          <div class="content">
-            <ul>
-              <li>
-                <form action="/demo/clients/" method="GET" class="form-search">
-                  <div>
-                    <input type="text" placeholder="search here...">
-                  </div>
-                  <button>go</button>
-                </form>
-              </li>
-              <li class="active"><a href="/demo/clients/">Listing clients</a></li>
-              <li><a href="/demo/clients/form.html">New client</a></li>
-              {% if page.collection == false %}
-              <li><a href="/demo/clients/form.html">Edit client</a></li>
-              <li><a href="/demo/clients/form.html">Delete client</a></li>
-              {% endif %}
-              {% if page.collection %}
-              <li class="error"><a href="/demo/clients/">10 selected clients</a></li>
-              {% endif %}
-            </ul>
-          </div>
-        </aside>
-        {% endif %}
-      </div>
-
-
-    </div>
   
-    <footer class="footer">
-      <div class="content">
-          <p>2012 © all rights reserved.</p>
-      </div>
-    </footer>    
-  </div>
+  {{ content }}
+
+  <link rel="stylesheet" href="/assets/typography.min.css">
+  <link rel="stylesheet" href="/assets/entypo/entypo.css">
+  <script type="text/javascript" src="/assets/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/classified.min.js"></script>
+  <script type="text/javascript" src="/assets/careless_admin.js"></script>
 </body>
 </html>

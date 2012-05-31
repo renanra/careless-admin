@@ -1,0 +1,79 @@
+---
+layout: demo
+---
+
+<div id="panel">
+  
+  <div class="wrapper">
+    <header class="header">
+        <div class="content">
+            <hgroup class="hgroup">
+                <h1><a href="/demo"><i class="icon-globe"></i>COMPANY</a></h1>
+                <h2>admin</h2>
+            </hgroup>
+            <nav class="user-nav">
+                <ul>
+                    <li>Signed in as</li><li><a class="tag info" href="/demo"><i class="icon-user"></i>Admin</a></li>
+                    <li><a href="/demo/sign_in.html" class="tag error"><i class="icon-cancel-circle"></i>Sign out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="nav">
+      <div class="content">
+        <ul>
+          <li{% if page.active_if == "/demo/" %} class="active"{% endif %}>
+            <a href="/demo"><i class="icon-monitor"></i>Dashboard</a>
+          </li>
+          <li{% if page.active_if == "/demo/clients/" %} class="active"{% endif %}>
+            <a href="/demo/clients"><i class="icon-users"></i>Clients</a>
+          </li>
+          <li><a href="#"><i class="icon-folder"></i>Projects</a></li>
+          <li><a href="#"><i class="icon-th"></i>Others</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="sub-wrapper">
+      <section class="section">
+        <div class="content">
+          {{ content }}
+        </div>
+      </section>
+      {% if page.aside %}
+      <aside class="aside">
+        <div class="content">
+          <ul>
+            <li>
+              <form action="/demo/clients/" method="GET" class="form-search">
+                  <input type="text" placeholder="search here...">
+                <button class="info">go</button>
+              </form>
+            </li>
+            <li><a href="/demo/clients/"><i class="icon-th-list"></i>Listing clients</a></li>
+            <li class="active"><a class="success" href="/demo/clients/form.html"><i class="icon-plus-circle"></i>New client</a></li>
+
+            {% if page.collection == false %}
+            <li class="separator">&nbsp;</li>
+            <li><a href="/demo/clients/form.html"><i class="icon-pencil"></i>Show client</a></li>
+            <li><a class="warning" href="/demo/clients/form.html"><i class="icon-pencil"></i>Edit client</a></li>
+            <li><a class="error" href="/demo/clients/form.html"><i class="icon-trash"></i>Delete client</a></li>
+            {% endif %}
+
+            {% if page.collection %}
+            <li><a class="error" href="/demo/clients/"><i class="icon-trash"></i>10 selected clients</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </aside>
+      {% endif %}
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="content">
+        <p>2012 © all rights reserved.</p>
+    </div>
+  </footer>    
+</div>

@@ -1,36 +1,25 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <title>Demo APP | Sign in</title>
-  <link rel="stylesheet" href="/assets/careless_admin.min.css">
-</head>
-<body>
-  <div id="modal">
-    <div class="content">
-      <h1>Sign in</h1>
-      <nav class="user-nav">
-        <ul>
-          <li><a href="/" class="tag info">go to docs</a></li>
-        </ul>
-      </nav>        
-      
-      <form action="/demo/" method="GET" class="form">
-        <div>
-          <label for="">Username</label>
-          <input type="text" placeholder="username">
-        </div>
-        <div>
-          <label for="">Password</label>
-          <input type="password" placeholder="password">
-        </div>
-        <div>
-          <button class="success">Entrar</button>
-        </div>
-      </form>
+---
+layout: modal
+title: Sign in
+---
 
-    </div>
+<h1>Sign in</h1>
+<nav class="user-nav">
+  <ul>
+    <li><a href="/" class="tag info"><i class="icon-reply"></i>go to docs</a></li>
+  </ul>
+</nav>        
+
+<form action="/demo/" method="GET" class="form">
+  <div>
+    <label for="">Username</label>
+    <input type="text" placeholder="username">
   </div>
-</body>
-</html>
-
+  <div>
+    <label for="">Password</label>
+    <input type="password" placeholder="password">
+  </div>
+  <div>
+    <button class="success">Entrar</button>
+  </div>
+</form>
