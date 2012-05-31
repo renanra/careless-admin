@@ -34,6 +34,8 @@
             <li{% if page.active_if == "/demo/clients/" %} class="active"{% endif %}>
               <a href="/demo/clients">Clients</a>
             </li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Others</a></li>
           </ul>
         </div>
       </nav>
@@ -44,7 +46,34 @@
             {{ content }}
           </div>
         </section>
+        {% if page.aside %}
+        <aside class="aside">
+          <div class="content">
+            <ul>
+              <li>
+                <form action="/demo/clients/" method="GET" class="form-search">
+                  <div>
+                    <input type="text" placeholder="search here...">
+                  </div>
+                  <button>go</button>
+                </form>
+              </li>
+              <li class="active"><a href="/demo/clients/">Listing clients</a></li>
+              <li><a href="/demo/clients/form.html">New client</a></li>
+              {% if page.collection == false %}
+              <li><a href="/demo/clients/form.html">Edit client</a></li>
+              <li><a href="/demo/clients/form.html">Delete client</a></li>
+              {% endif %}
+              {% if page.collection %}
+              <li class="error"><a href="/demo/clients/">10 selected clients</a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </aside>
+        {% endif %}
       </div>
+
+
     </div>
   
     <footer class="footer">
