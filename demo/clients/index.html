@@ -8,8 +8,6 @@ collection: true
 
 <h1>Listing clients</h1>
 
-  {{ i }}
-
 <table class="selectable">
   <thead>
     <tr>
@@ -21,13 +19,13 @@ collection: true
     </tr>
   </thead>
   <tbody>
-    {% for i in (1..10) %}
+    {% for i in (16..30) %}
     <tr>
       <td><input type="checkbox"></td>
-      <td><a href="demo/clients/show">Fulano</a></td>
-      <td>fulano@example.com</td>
-      <td>001122334455</td>
-      <td>@fulano</td>
+      <td><a href="demo/clients/show">Fulano {{i}}</a></td>
+      <td>fulano{{i}}@example.com</td>
+      <td>0011223344{{i}}</td>
+      <td>@fulano{{i}}</td>
     </tr>
     {% endfor %}
   </tbody>
