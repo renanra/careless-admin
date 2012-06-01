@@ -63,6 +63,10 @@ $(function() {
             $checkbox.triggerHandler('click');
         });
         
+        $('.selectable a').click(function(e) {
+            e.stopPropagation();
+        });
+
         var updateView = function() {
             var $table = $(this).parents('table:eq(0)');
             var countChecked = $table.find("tbody input[type=checkbox]:checked").length;
@@ -95,4 +99,5 @@ $(function() {
 
         updateView.call($checkboxes.eq(0));
     })();
+    
 });
