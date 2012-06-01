@@ -1,12 +1,14 @@
 ---
 layout: panel
 title: Listing Clients
-active_if: /demo/clients/
+active_if: demo/clients/
 aside: true
 collection: true
 ---
 
 <h1>Listing clients</h1>
+
+  {{ i }}
 
 <table class="selectable">
   <thead>
@@ -19,69 +21,15 @@ collection: true
     </tr>
   </thead>
   <tbody>
+    {% for i in (1..10) %}
     <tr>
       <td><input type="checkbox"></td>
-      <td><a href="#">Fulano</a></td>
+      <td><a href="demo/clients/show">Fulano</a></td>
       <td>fulano@example.com</td>
       <td>001122334455</td>
       <td>@fulano</td>
     </tr>
-    <tr>
-      <td><input type="checkbox"></td>
-      <td><a href="#">Fulano</a></td>
-      <td>fulano@example.com</td>
-      <td>001122334455</td>
-      <td>@fulano</td>
-    </tr>
-    <tr>
-      <td><input type="checkbox"></td>
-      <td><a href="#">Fulano</a></td>
-      <td>fulano@example.com</td>
-      <td>001122334455</td>
-      <td>@fulano</td>
-    </tr>
-    <tr>
-      <td><input type="checkbox"></td>
-      <td><a href="#">Fulano</a></td>
-      <td>fulano@example.com</td>
-      <td>001122334455</td>
-      <td>@fulano</td>
-    </tr>
-    <tr>
-      <td><input type="checkbox"></td>
-      <td><a href="#">Fulano</a></td>
-      <td>fulano@example.com</td>
-      <td>001122334455</td>
-      <td>@fulano</td>
-    </tr>
-    <tr>
-      <td><input type="checkbox"></td>
-      <td><a href="#">Fulano</a></td>
-      <td>fulano@example.com</td>
-      <td>001122334455</td>
-      <td>@fulano</td>
-    </tr>
-    <tr>
-      <td><input type="checkbox"></td>
-      <td><a href="#">Fulano</a></td>
-      <td>fulano@example.com</td>
-      <td>001122334455</td>
-      <td>@fulano</td>
-    </tr>
-    <tr>
-      <td><input type="checkbox"></td>
-      <td><a href="#">Fulano</a></td>
-      <td>fulano@example.com</td>
-      <td>001122334455</td>
-      <td>@fulano</td>
-    </tr>
-    <tr>
-      <td><input type="checkbox"></td>
-      <td><a href="#">Fulano</a></td>
-      <td>fulano@example.com</td>
-      <td>001122334455</td>
-      <td>@fulano</td>
-    </tr>
+    {% endfor %}
   </tbody>
 </table>
 
