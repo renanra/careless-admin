@@ -18,7 +18,10 @@ hr, table, tbody th, tbody td {
     border-color: #ededed;
 }
 tr:nth-child(even) {
-    background: #f8f8f8;
+    background: #fbfbfb;
+}
+tbody tr.active {
+    background: #f2f2f2;
 }
 thead, tfoot {
     background: #dfe0ff;
