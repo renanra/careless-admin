@@ -156,3 +156,15 @@ option {
     color: #cd0a0a;
     font-weight: bold;
 }
+.view {
+    p {
+        span {
+            color: $color_off;
+            display: inline-block;
+            width: 60px;
+            margin-right: 10px;
+        }
+        padding-bottom: 5px;
+        border-bottom: 1px solid #dedede;
+    }
+}

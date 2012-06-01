@@ -1065,3 +1065,14 @@ option {
   color: #cd0a0a;
   font-weight: bold;
 }
+
+.view p {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #dedede;
+}
+.view p span {
+  color: #888888;
+  display: inline-block;
+  width: 60px;
+  margin-right: 10px;
+}
