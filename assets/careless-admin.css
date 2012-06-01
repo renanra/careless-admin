@@ -578,6 +578,14 @@ th, td {
   width: 10px;
 }
 
+.actions tr > td:last-child,
+.actions tr > th:last-child {
+  text-align: right;
+}
+.actions [class^="icon-"], .actions [class*=" icon-"] {
+  margin-right: 0;
+}
+
 label, input[type=checkbox], input[type=radio] {
   display: inline-block;
   vertical-align: middle;
@@ -1048,8 +1056,8 @@ option {
 }
 
 .off {
-  color: #999;
-  background-color: #f2f2f2;
+  color: #999 !important;
+  background-color: #f2f2f2 !important;
 }
 
 .required:after {

@@ -8,8 +8,8 @@ Watch development
 jekyll --base-url /careless-admin
 
 # careless_admin(.min).css
-sass --watch scss/careless_admin.scss:assets/careless_admin.css --style expanded
-sass --watch scss/careless_admin.scss:assets/careless_admin.min.css --style compressed
+sass --watch scss/careless-admin.scss:assets/careless-admin.css --style expanded
+sass --watch scss/careless-admin.scss:assets/careless-admin.min.css --style compressed
 
 # typography(.min).css
 sass --watch scss/typography.scss:assets/typography.css --style expanded

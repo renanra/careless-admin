@@ -8,7 +8,7 @@ collection: true
 
 <h1>Listing clients</h1>
 
-<table class="selectable">
+<table class="selectable actions">
   <thead>
     <tr>
       <th><input type="checkbox"></th>
@@ -16,6 +16,7 @@ collection: true
       <th>Email</th>
       <th>Phone</th>
       <th>Twiiter</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -26,6 +27,10 @@ collection: true
       <td>fulano{{i}}@example.com</td>
       <td>0011223344{{i}}</td>
       <td>@fulano{{i}}</td>
+      <td>
+        <a href="#" class="warning"><i class="icon-pencil"></i></a>
+        <a href="#" class="error"><i class="icon-cancel"></i></a>
+      </td>
     </tr>
     {% endfor %}
   </tbody>
