@@ -1,0 +1,47 @@
+---
+layout: panel
+title: New Client
+active_if: demo/clients/
+aside: true
+collection: false
+---
+
+<h1>New client</h1>
+
+<div class="message error">
+  <span><a href="#"><i class="icon-cancel"></i></a></span>
+  <h4>2 errors found</h4>
+  <ul>
+    <li>Name is a required field</li>
+    <li>Email is a required field</li>
+  </ul>
+</div>
+
+<form action="demo/clients/show.html" method="GET" class="form">
+  
+  <div class="error">
+    <label class="required">Name</label>
+    <input type="text">
+  </div>
+  <div class="error">
+    <label class="required">Email</label>
+    <input type="text">
+  </div>
+  <div>
+    <label>Phone</label>
+    <input type="text">
+  </div>
+  <div>
+    <label>Twitter</label>
+    <input type="text">
+  </div>
+  <div class="off">
+    <label>Bonus</label>
+    <input type="text" value="$ 100.00" disabled>
+  </div>
+  <div>
+    <button class="success"><i class="icon-forward"></i>Save</button>
+    <a href="#" class="button error"><i class="icon-cancel"></i>Cancel</a>
+  </div>
+
+</form>

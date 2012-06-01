@@ -88,10 +88,9 @@ option {
 }
 .message > span {
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-    color: #666;
 }
 .message > span a {
-    color: #666
+    color: inherit
 }
 
 // Module Pagination
@@ -147,6 +146,9 @@ option {
 .off {
     color: #999 !important;
     background-color: #f2f2f2 !important;
+    > * {
+        color: inherit !important;
+    }
 }
 
 

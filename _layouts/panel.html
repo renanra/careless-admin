@@ -14,7 +14,7 @@ layout: demo
             <nav class="user-nav">
                 <ul>
                     <li>Signed in as</li><li><a class="tag info" href="demo/"><i class="icon-user"></i>Admin</a></li>
-                    <li><a href="demo/sign_in.html" class="tag error"><i class="icon-cancel-circle"></i>Sign out</a></li>
+                    <li><a href="demo/sign_in.html" class="tag error"><i class="icon-reply"></i>Sign out</a></li>
                 </ul>
             </nav>
         </div>
@@ -52,19 +52,19 @@ layout: demo
               </form>
             </li>
             <li><a href="demo/clients/"><i class="icon-th-list"></i>Listing clients</a></li>
-            <li class="active"><a class="success" href="demo/clients/form.html"><i class="icon-plus-circle"></i>New client</a></li>
+            <li class="active"><a class="success" href="demo/clients/new.html"><i class="icon-plus"></i>New client</a></li>
 
             {% if page.collection == false %}
             <li class="separator">&nbsp;</li>
-            <li><a href="demo/clients/form.html"><i class="icon-pencil"></i>Show client</a></li>
-            <li><a class="warning" href="demo/clients/form.html"><i class="icon-pencil"></i>Edit client</a></li>
-            <li><a class="error" href="demo/clients/form.html"><i class="icon-trash"></i>Delete client</a></li>
+            <li><a href="demo/clients/show.html"><i class="icon-pencil"></i>Show client</a></li>
+            <li><a class="warning" href="demo/clients/edit.html"><i class="icon-pencil"></i>Edit client</a></li>
+            <li><a class="error" href="#"><i class="icon-trash"></i>Delete client</a></li>
             {% endif %}
 
             {% if page.collection %}
             <li class="separator">&nbsp;</li>
-            <li><a class="off" href="demo/clients/"><i class="icon-trash"></i>Desactive 10 selected clients</a></li>
-            <li><a class="error" href="demo/clients/"><i class="icon-trash"></i>Delete 10 selected clients</a></li>
+            <li><a class="off" href="demo/clients/"><i class="icon-pause"></i>Desactive 10 selected clients</a></li>
+            <li><a class="error" href="demo/clients/"><i class="icon-cancel"></i>Delete 10 selected clients</a></li>
             {% endif %}
           </ul>
         </div>

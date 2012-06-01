@@ -15,6 +15,10 @@ sass --watch scss/careless-admin.scss:assets/careless-admin.min.css --style comp
 sass --watch scss/typography.scss:assets/typography.css --style expanded
 sass --watch scss/typography.scss:assets/typography.min.css --style compressed
 
+Desired Featured
+----------------
+Password strongness meter for password fields
+
 License
 -------
 Careless Admin is released under the MIT license:

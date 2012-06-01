@@ -490,7 +490,7 @@ a {
   text-decoration: inherit;
 }
 
-a:hover {
+a:hover, button:hover {
   text-decoration: underline;
 }
 
@@ -740,7 +740,7 @@ html, body, #panel {
 
 .wrapper {
   min-height: 100%;
-  margin-bottom: -28px;
+  margin-bottom: -32px;
 }
 
 .sub-wrapper, .header .content, .nav .content, .footer .content {
@@ -850,8 +850,8 @@ html, body, #panel {
 }
 
 .footer .content {
-  height: 26px;
-  line-height: 26px;
+  height: 32px;
+  line-height: 32px;
 }
 
 #modal {
@@ -1006,11 +1006,10 @@ option {
 
 .message > span {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  color: #666;
 }
 
 .message > span a {
-  color: #666666;
+  color: inherit;
 }
 
 .pagination li * {
@@ -1058,6 +1057,9 @@ option {
 .off {
   color: #999 !important;
   background-color: #f2f2f2 !important;
+}
+.off > * {
+  color: inherit !important;
 }
 
 .required:after {

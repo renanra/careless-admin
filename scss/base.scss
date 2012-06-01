@@ -19,7 +19,7 @@ body {
 a {
     text-decoration: inherit;
 }
-a:hover {
+a:hover, button:hover {
   text-decoration: underline;
 }
 
@@ -261,7 +261,7 @@ html, body, #panel {
 }
 .wrapper {
     min-height: 100%;
-    margin-bottom: -28px;
+    margin-bottom: -32px;
 }
 .sub-wrapper, .header .content, .nav .content, .footer .content {
     width: 980px;
@@ -368,8 +368,8 @@ html, body, #panel {
 }
 .footer {
   .content {
-    height: 26px;
-    line-height: 26px;
+    height: 32px;
+    line-height: 32px;
   }
 }
 #modal {
